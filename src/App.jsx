@@ -1,34 +1,34 @@
-import { useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+// it run at least once on mounting time..
+  // useEffect(()=>{
+  //   //that code we want to run
+  //   console.log("this is count ",count);
 
+  //   //optional return function
+  //   return ()=>{
+  //     console.log("I am being cleaned up!!")
+  //   }
+  // },[
+  //   //what it should listen to,so that it run code
+  //   count
+  // ])
+  const items =1
+  const selecteditem = useMemo(()=>(items.find((item)=> item.isSelected)),[items])
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+  <>
+    <div>
+      <h1>Count : {count} </h1>
+      <button onClick={()=> setCount(count+1)}>incremant</button>
+      <button onClick={()=>setCount(count-1)}>decrement</button>
+
+    </div>
+  </>
   )
 }
 
