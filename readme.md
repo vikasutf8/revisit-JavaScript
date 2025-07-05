@@ -47,3 +47,9 @@ console.log(res);
 
 
 // function ke pass ek key hoti ha prototype jo ki kisi bhi child function ke sath share kar shaket hai
+
+
+
+
+
+<!-- #test2 -->
