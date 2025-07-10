@@ -62,4 +62,32 @@ console.log(res);
 // slice(start,end) :: return shallow copy of array from start index to end index(exclusive)
 
 
-<!--  -->
+<!-- CALL APPLY BIND -->
+
+- call function exist inside a prototype chain..and it can use when manuplate and custom value of "this" in function
+show.call(thisArg,arg1,arg2,arg3)
+
+
+IMPORTANT : thisArg ::if permitive. type then its convet it into object
+
+
+- Apply : only difference form call is just pass argThis and argArrray ...not  arg1 arg2 arg3
+passing  array instead of arguments
+
+
+- Bind : this is not immidiate return value of this like call,apply but it return new function in which value of this(fixed) is set that we want..
+IT set value its parmanetly except one case ::that was "new" keyword
+..meant first we this value is refring some other object of that fuction...
+but for that we create new object <-- this is refre new wali value
+
+
+
+
+<!-- DEBOUNCING -->
+next, previous call ka gap rahega tab tak call nahi hogi ...delay mein nahi karte hoga
+
+
+<!-- throttle -->
+fix interval me fix request accept karna
+-leading  :no wait of delay at first time
+-trailing : what if last scroll and current position of scroller
