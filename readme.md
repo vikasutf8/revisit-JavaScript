@@ -52,4 +52,14 @@ console.log(res);
 
 
 
-<!-- #test2 -->
+<!-- SLICE -->
+// slice : to extract range of element from existing Array and it return new array ..not modify existing array
+// and its return shalow copy of array ...not working new array nested array 
+
+
+// slice() :: return shallow copy of array
+// slice(start) :: return shallow copy of array from start index to length of array
+// slice(start,end) :: return shallow copy of array from start index to end index(exclusive)
+
+
+<!--  -->
